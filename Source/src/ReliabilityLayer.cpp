@@ -2829,7 +2829,7 @@ InternalPacket* ReliabilityLayer::CreateInternalPacketFromBitStream(SLNet::BitSt
 	}
 
 	//https://github.com/SLikeSoft/SLikeNet/issues/60
-	const int maxPacketSize = 1024 * 1024 * 4;
+	const int maxPacketSize = 1024 * 1024 * 1;
 	const int maxPacketSplit = (maxPacketSize + (MINIMUM_MTU_SIZE - 1)) / MINIMUM_MTU_SIZE;
 	if (readSuccess==false ||
 		internalPacket->dataBitLength==0 ||
